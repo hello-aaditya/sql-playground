@@ -8,4 +8,4 @@ create table students
     name varchar(30),
     age int,
     email varchar(50)
-);   
+);
