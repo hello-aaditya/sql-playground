@@ -24,7 +24,7 @@ insert into students values
 (165, "Priya Nair", 23, "priyanair001@gmail.com"),
 (166, "Rajesh Iyer", 27, "rajesh.iyer1997@gmail.com"),
 (167, "Ananya Reddy", 22, "ananyareddy327@gmail.com"),
-(168, "Vikram Rao", 28, "vikram.rao9618@gmail.com");
+(168, "Vikram Rao", 28, "vikram.rao9618@gmail.com"),
 (169, "Amit Sharma", 28, "amit_sharma97@yahoo.com"),
 (170, "Priya Kaur", 25, "priya.kaur.2000@outlook.com"),
 (171, "Rahul Verma", 30, "rahulv1995@rediffmail.com"),
@@ -54,6 +54,7 @@ insert into students values
 (195, "Lalita Saikia", 26, "lalita_saikia99@mailbox.org"),
 (196, "Sanju Yadav", 27, "sanjuyadav98@keemail.me"),
 (197, "Kiran Pawar", 25, "kiranpawar2000@cock.li");
+
 
 
 select * from students;
