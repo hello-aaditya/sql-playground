@@ -79,7 +79,7 @@ SELECT * FROM projects;
 # `manager` table
 ![[Pasted image 20251220103332.png]]
 # `project` table
-
+![[Pasted image 20251220103422.png]]
 #### Question-1:  Fetch the employees name and the department name they belong to. 
 ```sql
 -- Inner Join / JOIN
