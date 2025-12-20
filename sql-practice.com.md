@@ -54,8 +54,14 @@ where year(birth_date) = 2010;
 ```
 #### 9. Show the first_name, last_name, and height of the patient with the greatest height.
 ```sql
-select count(*)
+select first_name, last_name, height
 from patients
-where year(birth_date) = 2010;
+where height = (select max(height) from patients);
 ```
-
+#### 10. Show all columns for patients who have one of the following patient_ids:  
+1,45,534,879,1000
+```sql
+select first_name, last_name, height
+from patients
+where height = (select max(height) from patients);
+```
