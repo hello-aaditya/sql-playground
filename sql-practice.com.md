@@ -48,7 +48,14 @@ join province_names as pn on pt.province_id = pn.province_id;
 ```
 #### 8. Show how many patients have a birth_date with 2010 as the birth year.
 ```sql
-select pt.first_name, pt.last_name, pn.province_name
-from patients as pt
-join province_names as pn on pt.province_id = pn.province_id;
+select count(*)
+from patients
+where year(birth_date) = 2010;
 ```
+#### 9. Show the first_name, last_name, and height of the patient with the greatest height.
+```sql
+select count(*)
+from patients
+where year(birth_date) = 2010;
+```
+
