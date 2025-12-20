@@ -72,3 +72,4 @@ INSERT INTO projects VALUES
 
 SELECT * FROM projects;
 ```
+#### Query Fetch the employees name and the department name they belong to. 
