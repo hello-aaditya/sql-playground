@@ -7,4 +7,15 @@ select first_name, last_name, gender
 from patients
 where gender='M';
 ```
-#### 1. Show first name, last name, and gender of patients whose gender is 'M'
+#### 2. Show first name and last name of patients who does not have allergies. (null)
+```sql
+select first_name, last_name
+from patients
+where allergies is null;
+```
+#### 3. Show first name of patients that start with the letter 'C'
+```sql
+select first_name, last_name
+from patients
+where allergies is null;
+```
