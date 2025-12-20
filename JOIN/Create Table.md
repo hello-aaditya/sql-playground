@@ -72,6 +72,7 @@ INSERT INTO projects VALUES
 
 SELECT * FROM projects;
 ```
+# De
 #### Question-1:  Fetch the employees name and the department name they belong to. 
 ```sql
 -- Inner Join / JOIN
