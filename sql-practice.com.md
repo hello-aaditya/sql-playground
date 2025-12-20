@@ -61,7 +61,8 @@ where height = (select max(height) from patients);
 #### 10. Show all columns for patients who have one of the following patient_ids:  
 1,45,534,879,1000
 ```sql
-select first_name, last_name, height
+select *
 from patients
-where height = (select max(height) from patients);
+where patient_id in (1,45,534,879,1000);
 ```
+
