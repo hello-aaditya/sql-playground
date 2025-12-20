@@ -34,7 +34,4 @@ where allergies is null;
 ```
 #### 6. Show first name and last name concatinated into one column to show their full name.
 ```sql
-update patients
-set allergies = "NKA"
-where allergies is null;
 ```
