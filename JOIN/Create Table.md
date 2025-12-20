@@ -75,6 +75,9 @@ SELECT * FROM projects;
 # `department` Table
 ![[Pasted image 20251220103005.png]]
 # `employee` Table
+![[Pasted image 20251220103236.png]]
+# `manager` table
+
 #### Question-1:  Fetch the employees name and the department name they belong to. 
 ```sql
 -- Inner Join / JOIN
