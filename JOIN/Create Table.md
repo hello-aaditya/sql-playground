@@ -80,10 +80,3 @@ SELECT * FROM projects;
 ![Manager Table](./images/manager_tabel.png)
 # `project` table
 ![Project Table](./images/project_tabel.png)
-#### Question-1:  Fetch the employees name and the department name they belong to. 
-```sql
--- Inner Join / JOIN
-select e.emp_name, d.dept_name
-from employee as e 
-join department as d on e.dept_id = d.dept_id;
-```
