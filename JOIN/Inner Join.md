@@ -15,3 +15,4 @@ from employee as e
 join department as d on e.dept_id = d.dept_id;
 ```
 ![[Pasted image 20251220103918.png]]
+![Inner Join](./images/inner_join_result-1.png)
