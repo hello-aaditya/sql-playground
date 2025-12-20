@@ -75,9 +75,10 @@ SELECT * FROM projects;
 # `department` Table
 ![Department Table](./images/department_tabel.png)
 # `employee` Table
-![[Pasted image 20251220103236.png]]
+![Employee Table](./images/employee_tabel.png)
 # `manager` table
 ![[Pasted image 20251220103332.png]]
+![](./images/manager_tabel.png)
 # `project` table
 ![[Pasted image 20251220103422.png]]
 #### Question-1:  Fetch the employees name and the department name they belong to. 
