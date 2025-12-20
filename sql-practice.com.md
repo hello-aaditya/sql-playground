@@ -1,4 +1,4 @@
-# [sql-practice.com]()
+# [sql-practice.com](https://www.sql-practice.com/)
 ## `patients` database
 ## Section-1: EASY
 #### 1. Show first name, last name, and gender of patients whose gender is 'M'
@@ -42,7 +42,13 @@ from patients;
 
 Example: 'Ontario' instead of 'ON'
 ```sql
-select concat(first_name, " ", last_name)
-as full_name
-from patients;
+select pt.first_name, pt.last_name, pn.province_name
+from patients as pt
+join province_names as pn on pt.province_id = pn.province_id;
+```
+#### 8. Show how many patients have a birth_date with 2010 as the birth year.
+```sql
+select pt.first_name, pt.last_name, pn.province_name
+from patients as pt
+join province_names as pn on pt.province_id = pn.province_id;
 ```
