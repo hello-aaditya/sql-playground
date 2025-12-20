@@ -1,4 +1,4 @@
-Department + employees + manager + 
+Department + employees + manager + projects
 ```sql
 -- create databse
 create database company;
