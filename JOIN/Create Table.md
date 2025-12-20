@@ -72,7 +72,8 @@ INSERT INTO projects VALUES
 
 SELECT * FROM projects;
 ```
-# De
+# Department tabel
+![[Pasted image 20251220103005.png]]
 #### Question-1:  Fetch the employees name and the department name they belong to. 
 ```sql
 -- Inner Join / JOIN
