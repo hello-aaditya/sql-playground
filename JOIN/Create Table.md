@@ -73,7 +73,7 @@ INSERT INTO projects VALUES
 SELECT * FROM projects;
 ```
 # `department` Table
-![[Pasted image 20251220103005.png]]
+![Department Table](./images/department_tabel.png)
 # `employee` Table
 ![[Pasted image 20251220103236.png]]
 # `manager` table
