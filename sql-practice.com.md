@@ -90,7 +90,13 @@ where province_id = "NS";
 ```
 #### 15. Write a query to find the first_name, last name and birth date of patients who has height greater than 160 and weight greater than 70
 ```sql
-select distinct(city) as unique_cities
+select first_name, last_name, birth_date
 from patients
-where province_id = "NS";
+where height > 160 and weight > 70;
+```
+#### 16. Write a query to find list of patients first_name, last_name, and allergies where allergies are not null and are from the city of 'Hamilton'
+```sql
+select first_name, last_name, birth_date
+from patients
+where height > 160 and weight > 70;
 ```
