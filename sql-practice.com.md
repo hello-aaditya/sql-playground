@@ -72,7 +72,15 @@ from admissions;
 ```
 #### 12.  Show all the columns from admissions where the patient was admitted and discharged on the same day.
 ```sql
-select count(*)
-from admissions;
+select * 
+from admissions
+where admission_date = discharge_date;
 ```
+#### 13.  Show the patient id and the total number of admissions for patient_id 579.
+```sql
+select * 
+from admissions
+where admission_date = discharge_date;
+```
+
 
