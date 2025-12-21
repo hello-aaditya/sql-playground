@@ -67,7 +67,7 @@ where patient_id in (1,45,534,879,1000);
 ```
 #### 11. Show the total number of admissions
 ```sql
-select *
-from patients
-where patient_id in (1,45,534,879,1000);
+select count(*)
+from admissions;
 ```
+
