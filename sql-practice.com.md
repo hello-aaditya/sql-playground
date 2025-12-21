@@ -123,7 +123,23 @@ where first_name like "s%s" and length(first_name) >= 6;
 ```
 #### 4. Show patient_id, first_name, last_name from patients whos diagnosis is 'Dementia'.  Primary diagnosis is stored in the admissions table.
 ```sql
-select patient_id, first_name
-from patients
-where first_name like "s%s" and length(first_name) >= 6;
+select
+	pt.patient_id,
+    pt.first_name,
+    pt.last_name
+from patients as pt
+join admissions as a on pt.patient_id = a.patient_id
+where a.diagnosis = "Dementia";
 ```
+#### 4. Display every patient's first_name.  
+Order the list by the length of each name and then by alphabetically.
+```sql
+select
+	pt.patient_id,
+    pt.first_name,
+    pt.last_name
+from patients as pt
+join admissions as a on pt.patient_id = a.patient_id
+where a.diagnosis = "Dementia";
+```
+
