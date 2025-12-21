@@ -121,7 +121,7 @@ select patient_id, first_name
 from patients
 where first_name like "s%s" and length(first_name) >= 6;
 ```
-#### 4. Show patient_id and first_name from patients where their first_name start and ends with 's' and is at least 6 characters long.
+#### 4. Show patient_id, first_name, last_name from patients whos diagnosis is 'Dementia'.  Primary diagnosis is stored in the admissions table.
 ```sql
 select patient_id, first_name
 from patients
