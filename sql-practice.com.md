@@ -103,7 +103,8 @@ where allergies is not null and city = "Hamilton";
 ## Section-1: MEDIUM
 #### 1. Show unique birth years from patients and order them by ascending.
 ```sql
-select first_name, last_name, allergies
+select distinct(year(birth_date)) as birth_year
 from patients
-where allergies is not null and city = "Hamilton";
+order by birth_date;
 ```
+
