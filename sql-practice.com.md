@@ -134,12 +134,16 @@ where a.diagnosis = "Dementia";
 #### 4. Display every patient's first_name.  
 Order the list by the length of each name and then by alphabetically.
 ```sql
-select
-	pt.patient_id,
-    pt.first_name,
-    pt.last_name
-from patients as pt
-join admissions as a on pt.patient_id = a.patient_id
-where a.diagnosis = "Dementia";
+select first_name
+from patients
+order by length(first_name), first_name;
 ```
+#### 4. Show the total amount of male patients and the total amount of female patients in the patients table.  
+Display the two results in the same row.
+```sql
+select first_name
+from patients
+order by length(first_name), first_name;
+```
+
 
