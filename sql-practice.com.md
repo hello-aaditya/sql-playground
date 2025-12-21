@@ -117,7 +117,13 @@ having count(first_name)=1;
 ```
 #### 3. Show patient_id and first_name from patients where their first_name start and ends with 's' and is at least 6 characters long.
 ```sql
-select distinct(year(birth_date)) as birth_year
+select patient_id, first_name
 from patients
-order by birth_date;
+where first_name like "s%s" and length(first_name) >= 6;
+```
+#### 4. Show patient_id and first_name from patients where their first_name start and ends with 's' and is at least 6 characters long.
+```sql
+select patient_id, first_name
+from patients
+where first_name like "s%s" and length(first_name) >= 6;
 ```
