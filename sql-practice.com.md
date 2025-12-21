@@ -108,7 +108,7 @@ from patients
 order by birth_date;
 ```
 #### 2. Show unique first names from the patients table which only occurs once in the list.  
-### For example, if two or more people are named 'John' in the first_name column then don't include their name in the output list. If only 1 person is named 'Leo' then include them in the output.
+#### For example, if two or more people are named 'John' in the first_name column then don't include their name in the output list. If only 1 person is named 'Leo' then include them in the output.
 ```sql
 select distinct(year(birth_date)) as birth_year
 from patients
