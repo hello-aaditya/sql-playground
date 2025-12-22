@@ -161,7 +161,7 @@ order by
     first_name,
     last_name;
 ```
-#### 7. Show first and last name, allergies from patients which have allergies to either 'Penicillin' or 'Morphine'. Show results ordered ascending by allergies then by first_name then by last_name.
+#### 8. Show patient_id, diagnosis from admissions. Find patients admitted multiple times for the same diagnosis.
 ```sql
 select
 	first_name,
