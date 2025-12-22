@@ -234,11 +234,15 @@ order by birth_date;
 #### 14. We want to display each patient's full name in a single column. Their last_name in all upper letters must appear first, then first_name in all lower case letters. Separate the last_name and first_name with a comma. Order the list by the first_name in decending order  
 EX: SMITH,jane
 ```sql
-select
-	first_name,
-    last_name,
-    birth_date
+select 
+  concat(upper(last_name), ",", lower(first_name)) as new_name_format
 from patients
-where year(birth_date) between 1970 and 1979
-order by birth_date;
+order by first_name desc;
+```
+#### 15. Show the province_id(s), sum of height; where the total sum of its patient's height is greater than or equal to 7,000.
+```sql
+select 
+  concat(upper(last_name), ",", lower(first_name)) as new_name_format
+from patients
+order by first_name desc;
 ```
