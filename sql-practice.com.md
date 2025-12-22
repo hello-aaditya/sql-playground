@@ -184,8 +184,8 @@ order by
 	num_patients desc,
     city;
 ```
-#### 9. Show the city and the total number of patients in the city.  
-Order from most to least patients and then by city name ascending.
+#### 10. Show first name, last name and role of every person that is either patient or doctor.  
+The roles are either "Patient" or "Doctor"
 ```sql
 select
 	city,
