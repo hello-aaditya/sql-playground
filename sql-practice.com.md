@@ -193,12 +193,28 @@ select
   "Patient" as role
 from patients
 
-union
+union all
 
 select
 	first_name,
     last_name,
     "Doctor" as role
   from doctors;
-  
 ```
+#### 11. Show all allergies ordered by popularity. Remove NULL values from query.
+```sql
+select
+  first_name,
+  last_name,
+  "Patient" as role
+from patients
+
+union all
+
+select
+	first_name,
+    last_name,
+    "Doctor" as role
+  from doctors;
+```
+
