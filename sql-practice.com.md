@@ -286,9 +286,20 @@ having admission_date = max(admission_date);
 2. attending_doctor_id contains a 2 and the length of patient_id is 3 characters.
 ```sql
 select
-	day(admission_date) as day_number,
-    count(*) as number_of_admissions
+	patient_id,
+    attending_doctor_id,
+    diagnosis
 from admissions
-group by day_number
-order by number_of_admissions desc;
+where
+	(
+      mod(patient_id, 2) = 1 
+      and
+      attending_doctor_id in (1, 5, 19)
+    )
+    or
+    (
+      cast(attending_doctor_id as char) like "%2%"
+      and
+      length(cast(patient_id as char)) = 3
+    );
 ```
