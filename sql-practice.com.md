@@ -188,11 +188,17 @@ order by
 The roles are either "Patient" or "Doctor"
 ```sql
 select
-	city,
-    count(*) as num_patients
+  first_name,
+  last_name,
+  "Patient" as role
 from patients
-group by city
-order by 
-	num_patients desc,
-    city;
+
+union
+
+select
+	first_name,
+    last_name,
+    "Doctor" as role
+  from doctors;
+  
 ```
