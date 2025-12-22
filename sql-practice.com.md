@@ -214,10 +214,12 @@ order by total_diagnosis desc;
 #### 12. Show all patient's first_name, last_name, and birth_date who were born in the 1970s decade. Sort the list starting from the earliest birth_date.
 ```sql
 select
-	allergies,
-    count(*) as total_diagnosis
+	first_name,
+    last_name,
+    birth_date
 from patients
-where allergies is not null
-group by allergies
-order by total_diagnosis desc;
+where year(birth_date) between 1970 and 1979
+order by birth_date;
 ```
+
+
