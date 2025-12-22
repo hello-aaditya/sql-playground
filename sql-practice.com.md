@@ -204,17 +204,20 @@ select
 #### 11. Show all allergies ordered by popularity. Remove NULL values from query.
 ```sql
 select
-  first_name,
-  last_name,
-  "Patient" as role
+	allergies,
+    count(*) as total_diagnosis
 from patients
-
-union all
-
-select
-	first_name,
-    last_name,
-    "Doctor" as role
-  from doctors;
+where allergies is not null
+group by allergies
+order by total_diagnosis desc;
 ```
-
+#### 11. Show all allergies ordered by popularity. Remove NULL values from query.
+```sql
+select
+	allergies,
+    count(*) as total_diagnosis
+from patients
+where allergies is not null
+group by allergies
+order by total_diagnosis desc;
+```
