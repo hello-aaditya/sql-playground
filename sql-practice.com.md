@@ -250,11 +250,16 @@ having sum_height >= 7000;
 ```
 #### 16. Show the difference between the largest weight and smallest weight for patients with the last name 'Maroni'
 ```sql
-select 
-  province_id,
-  sum(height) as sum_height
+select
+	max(weight) - min(weight)
 from patients
-group by province_id
-having sum_height >= 7000;
+where last_name like "Maroni";
+```
+#### 17. Show all of the days of the month (1-31) and how many admission_dates occurred on that day. Sort by the day with most admissions to least admissions.
+```sql
+select
+	max(weight) - min(weight)
+from patients
+where last_name like "Maroni";
 ```
 
