@@ -242,7 +242,19 @@ order by first_name desc;
 #### 15. Show the province_id(s), sum of height; where the total sum of its patient's height is greater than or equal to 7,000.
 ```sql
 select 
-  concat(upper(last_name), ",", lower(first_name)) as new_name_format
+  province_id,
+  sum(height) as sum_height
 from patients
-order by first_name desc;
+group by province_id
+having sum_height >= 7000;
 ```
+#### 16. Show the difference between the largest weight and smallest weight for patients with the last name 'Maroni'
+```sql
+select 
+  province_id,
+  sum(height) as sum_height
+from patients
+group by province_id
+having sum_height >= 7000;
+```
+
