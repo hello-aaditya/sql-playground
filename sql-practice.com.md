@@ -211,7 +211,7 @@ where allergies is not null
 group by allergies
 order by total_diagnosis desc;
 ```
-#### 11. Show all allergies ordered by popularity. Remove NULL values from query.
+#### 12. Show all patient's first_name, last_name, and birth_date who were born in the 1970s decade. Sort the list starting from the earliest birth_date.
 ```sql
 select
 	allergies,
