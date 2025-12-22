@@ -281,3 +281,14 @@ where patient_id = 542
 group by patient_id
 having admission_date = max(admission_date);
 ```
+#### 19. Show patient_id, attending_doctor_id, and diagnosis for admissions that match one of the two criteria:  
+1. patient_id is an odd number and attending_doctor_id is either 1, 5, or 19.  
+2. attending_doctor_id contains a 2 and the length of patient_id is 3 characters.
+```sql
+select
+	day(admission_date) as day_number,
+    count(*) as number_of_admissions
+from admissions
+group by day_number
+order by number_of_admissions desc;
+```
