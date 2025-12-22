@@ -266,10 +266,9 @@ order by number_of_admissions desc;
 ```
 #### 18. Show all columns for patient_id 542's most recent admission_date.
 ```sql
-select
-	day(admission_date) as day_number,
-    count(*) as number_of_admissions
+select *
 from admissions
-group by day_number
-order by number_of_admissions desc;
+where patient_id = 542
+order by admission_date desc
+limit 1;
 ```
