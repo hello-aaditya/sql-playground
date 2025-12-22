@@ -258,8 +258,18 @@ where last_name like "Maroni";
 #### 17. Show all of the days of the month (1-31) and how many admission_dates occurred on that day. Sort by the day with most admissions to least admissions.
 ```sql
 select
-	max(weight) - min(weight)
-from patients
-where last_name like "Maroni";
+	day(admission_date) as day_number,
+    count(*) as number_of_admissions
+from admissions
+group by day_number
+order by number_of_admissions desc;
 ```
-
+#### 18. Show all columns for patient_id 542's most recent admission_date.
+```sql
+select
+	day(admission_date) as day_number,
+    count(*) as number_of_admissions
+from admissions
+group by day_number
+order by number_of_admissions desc;
+```
