@@ -307,9 +307,10 @@ where
 Every admission has been attended by a doctor.
 ```sql
 select
-	day(admission_date) as day_number,
-    count(*) as number_of_admissions
-from admissions
-group by day_number
-order by number_of_admissions desc;
+	d.first_name,
+    d.last_name,
+    count(a.attending_doctor_id)
+from admissions as a
+join doctors as d on a.attending_doctor_id = d.doctor_id
+group by a.attending_doctor_id;
 ```
