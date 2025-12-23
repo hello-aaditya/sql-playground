@@ -327,10 +327,20 @@ group by a.attending_doctor_id;
 #### 22. Display the total amount of patients for each province. Order by descending.
 ```sql
 select
-	d.first_name,
-    d.last_name,
-    count(a.attending_doctor_id)
-from admissions as a
-join doctors as d on a.attending_doctor_id = d.doctor_id
-group by a.attending_doctor_id;
+	pn.province_name,
+	count(p.patient_id) as patient_count
+from patients as p
+join province_names as pn on p.province_id = pn.province_id
+group by pn.province_id 
+order by patient_count desc;
+```
+#### 23. For every admission, display the patient's full name, their admission diagnosis, and their doctor's full name who diagnosed their problem.
+```sql
+select
+	pn.province_name,
+	count(p.patient_id) as patient_count
+from patients as p
+join province_names as pn on p.province_id = pn.province_id
+group by pn.province_id 
+order by patient_count desc;
 ```
