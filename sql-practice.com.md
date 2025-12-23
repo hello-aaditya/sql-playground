@@ -314,8 +314,7 @@ from admissions as a
 join doctors as d on a.attending_doctor_id = d.doctor_id
 group by a.attending_doctor_id;
 ```
-#### 21. Show first_name, last_name, and the total number of admissions attended for each doctor.  
-Every admission has been attended by a doctor.
+#### 21. For each doctor, display their id, full name, and the first and last admission date they attended.
 ```sql
 select
 	d.first_name,
