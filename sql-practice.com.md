@@ -303,3 +303,13 @@ where
       length(cast(patient_id as char)) = 3
     );
 ```
+#### 20. Show first_name, last_name, and the total number of admissions attended for each doctor.  
+Every admission has been attended by a doctor.
+```sql
+select
+	day(admission_date) as day_number,
+    count(*) as number_of_admissions
+from admissions
+group by day_number
+order by number_of_admissions desc;
+```
