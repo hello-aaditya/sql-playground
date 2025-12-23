@@ -355,8 +355,14 @@ from patients
 group by first_name, last_name
 having num_of_duplicates > 1;
 ```
-#### 24. display the first name, last name and number of duplicate patients based on their first name and last name.  
-Ex: A patient with an identical name can be considered a duplicate.
+#### 25. Display patient's full name,  
+height in the units feet rounded to 1 decimal,  
+weight in the unit pounds rounded to 0 decimals,  
+birth_date,  
+gender non abbreviated.  
+  
+Convert CM to feet by dividing by 30.48.  
+Convert KG to pounds by multiplying by 2.205.
 ```sql
 select
     first_name,
