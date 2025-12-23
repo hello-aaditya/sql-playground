@@ -365,19 +365,13 @@ Convert CM to feet by dividing by 30.48.
 Convert KG to pounds by multiplying by 2.205.
 ```sql
 select
-    first_name,
-    last_name,
-    count(*) as num_of_duplicates
-from patients
-group by first_name, last_name
-having num_of_duplicates > 1;
+	concat(first_name, ' ', last_name) as patient_name,
+    round((height/30.48), 1) as 'height "Feet"',
+    round((weight*2.205), 0) as 'weight "Pounds"',
+    birth_date,
+    case
+      when gender='M' then 'MALE'
+        else 'FEMALE'
+      end AS gender_type
+from patients;
 ```
-select
-    concat(first_name, ' ', last_name) AS 'patient_name', 
-    ROUND(height / 30.48, 1) as 'height "Feet"', 
-    ROUND(weight * 2.205, 0) AS 'weight "Pounds"', birth_date,
-CASE
-	WHEN gender = 'M' THEN 'MALE' 
-  ELSE 'FEMALE' 
-END AS 'gender_type'
-from patients
