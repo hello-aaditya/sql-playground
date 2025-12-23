@@ -337,10 +337,21 @@ order by patient_count desc;
 #### 23. For every admission, display the patient's full name, their admission diagnosis, and their doctor's full name who diagnosed their problem.
 ```sql
 select
-	pn.province_name,
-	count(p.patient_id) as patient_count
+	concat(p.first_name, " ", p.last_name) as patient_name,
+    a.diagnosis,
+    concat(d.first_name, " ", d.last_name) as doctor_name
 from patients as p
-join province_names as pn on p.province_id = pn.province_id
-group by pn.province_id 
-order by patient_count desc;
+join admissions as a on p.patient_id = a.patient_id
+join doctors as d on a.attending_doctor_id = d.doctor_id;
+```
+#### 24. display the first name, last name and number of duplicate patients based on their first name and last name.  
+Ex: A patient with an identical name can be considered a duplicate.
+```sql
+select
+	concat(p.first_name, " ", p.last_name) as patient_name,
+    a.diagnosis,
+    concat(d.first_name, " ", d.last_name) as doctor_name
+from patients as p
+join admissions as a on p.patient_id = a.patient_id
+join doctors as d on a.attending_doctor_id = d.doctor_id;
 ```
