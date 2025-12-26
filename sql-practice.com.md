@@ -376,3 +376,28 @@ select
 from patients;
 ```
 #### 26. Show patient_id, first_name, last_name from patients whose does not have any records in the admissions table. (Their patient_id does not exist in any admissions.patient_id rows.)
+```sql
+select
+	p.patient_id,
+    p.first_name,
+    p.last_name
+from patients as p
+where not exists (
+  select 1
+  FROM admissions a
+  WHERE a.patient_id = p.patient_id
+);
+```
+#### 27. Show patient_id, first_name, last_name from patients whose does not have any records in the admissions table. (Their patient_id does not exist in any admissions.patient_id rows.)
+```sql
+select
+	p.patient_id,
+    p.first_name,
+    p.last_name
+from patients as p
+where not exists (
+  select 1
+  FROM admissions a
+  WHERE a.patient_id = p.patient_id
+);
+```
