@@ -409,13 +409,27 @@ weight is in units kg.
 height is in units cm.
 ```sql
 select
-	p.patient_id,
-    p.first_name,
-    p.last_name
-from patients as p
-where not exists (
-  select 1
-  FROM admissions a
-  WHERE a.patient_id = p.patient_id
-);
+	patient_id,
+    weight,
+    height,
+    case
+    	when (weight / power(height / 100.00, 2)) >= 30 then 1
+        else 0
+      end as isObese
+from patients;
+```
+#### 29. Show patient_id, first_name, last_name, and attending doctor's specialty.  
+Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'  
+  
+Check patients, admissions, and doctors tables for required information.
+```sql
+select
+	patient_id,
+    weight,
+    height,
+    case
+    	when (weight / power(height / 100.00, 2)) >= 30 then 1
+        else 0
+      end as isObese
+from patients;
 ```
