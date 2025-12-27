@@ -28,3 +28,21 @@ select *
 from orderDetails
 order by Total_Orders desc;
 ```
+# 3. Select the ProductName and the TOTAL Number of Orders for Each product
+only return products that have been ordered more than 50 times
+```sql
+with productDetails as (
+  select
+    p.product_name,
+    sum(o.quantity) as order_count
+  from products as p
+  join order_details as o
+  on p.product_id = o.product_id
+  group by product_name
+)
+
+select *
+from productDetails
+where order_count > 50
+order by order_count desc;
+```
