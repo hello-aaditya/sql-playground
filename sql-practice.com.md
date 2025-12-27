@@ -100,7 +100,7 @@ select first_name, last_name, allergies
 from patients
 where allergies is not null and city = "Hamilton";
 ```
-## Section-1: MEDIUM
+## Section-2: MEDIUM
 #### 1. Show unique birth years from patients and order them by ascending.
 ```sql
 select distinct(year(birth_date)) as birth_year
@@ -434,7 +434,8 @@ select
       end as isObese
 from patients;
 ```
-#### 29. Show patient_id, first_name, last_name, and attending doctor's specialty.  
+## Section-3: HARD
+#### 1. Show patient_id, first_name, last_name, and attending doctor's specialty.  
 Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'  
   
 Check patients, admissions, and doctors tables for required information.
