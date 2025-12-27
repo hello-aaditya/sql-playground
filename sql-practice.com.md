@@ -388,6 +388,22 @@ where not exists (
   WHERE a.patient_id = p.patient_id
 );
 ```
+#### 27.  Display a single row with max_visits, min_visits, average_visits where the maximum, minimum and average number of admissions per day is calculated. Average is rounded to 2 decimal places.
+```sql
+with visitDetails as (
+  select
+    admission_date,
+    count(patient_id) as visits
+  from admissions
+  group by admission_date
+)
+
+select 
+  max(visits) as max_visits,
+  min(visits) as min_visits,
+  round(avg(visits), 2) as avg_visits
+from visitDetails;
+```
 #### 27. Show all of the patients grouped into weight groups.  
 Show the total amount of patients in each weight group.  
 Order the list by the weight group decending.  
