@@ -435,25 +435,17 @@ from patients;
 ```
 #### 30. Display a single row with max_visits, min_visits, average_visits where the maximum, minimum and average number of admissions per day is calculated. Average is rounded to 2 decimal places.
 ```sql
-select
-	patient_id,
-    weight,
-    height,
-    case
-    	when (weight / power(height / 100.00, 2)) >= 30 then 1
-        else 0
-      end as isObese
-from patients;
-```
-
-```sql
-select 
-	max(number_of_visits) as max_visits, 
-	min(number_of_visits) as min_visits, 
-  round(avg(number_of_visits),2) as average_visits 
-from (
-  select admission_date, count(*) as number_of_visits
-  from admissions 
+with visitDetails as (
+  select
+    admission_date,
+    count(patient_id) as visits
+  from admissions
   group by admission_date
 )
+
+select 
+  max(visits) as max_visits,
+  min(visits) as min_visits,
+  round(avg(visits), 2) as avg_visits
+from visitDetails;
 ```
