@@ -433,10 +433,7 @@ select
       end as isObese
 from patients;
 ```
-#### 30. Show patient_id, first_name, last_name, and attending doctor's specialty.  
-Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'  
-  
-Check patients, admissions, and doctors tables for required information.
+#### 30. Display a single row with max_visits, min_visits, average_visits where the maximum, minimum and average number of admissions per day is calculated. Average is rounded to 2 decimal places.
 ```sql
 select
 	patient_id,
