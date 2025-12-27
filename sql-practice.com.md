@@ -434,6 +434,9 @@ select
       end as isObese
 from patients;
 ```
+#### 29. Display every patient that has at least one admission and show their most recent admission along with the patient and doctor's full name.
+```sql
+```
 ## Section-3: HARD
 #### 1. Show patient_id, first_name, last_name, and attending doctor's specialty.  
 Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'  
