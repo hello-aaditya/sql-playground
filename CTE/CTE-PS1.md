@@ -13,3 +13,18 @@ with productCategories as (
 select *
 from productCategories;
 ```
+# 2. Select CustomerID and Each Customers Number of Orders
+```sql
+with orderDetails as (
+	select 
+		c.customer_id as Customer_ID,
+		count(o.Order_id) as Total_Orders
+	from customers as c
+	join orders as o on c.customer_id = o.customer_id
+	group by c.customer_id
+)
+
+select *
+from orderDetails
+order by Total_Orders desc;
+```
