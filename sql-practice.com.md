@@ -445,3 +445,15 @@ select
       end as isObese
 from patients;
 ```
+
+```sql
+select 
+	max(number_of_visits) as max_visits, 
+	min(number_of_visits) as min_visits, 
+  round(avg(number_of_visits),2) as average_visits 
+from (
+  select admission_date, count(*) as number_of_visits
+  from admissions 
+  group by admission_date
+)
+```
