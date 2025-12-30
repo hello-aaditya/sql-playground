@@ -418,11 +418,7 @@ from patients
 group by weight_group
 order by weight_group desc;
 ```
-#### 28.   Show patient_id, weight, height, isObese from the patients table.  
-Display isObese as a boolean 0 or 1.  
-Obese is defined as weight(kg)/(height(m)2) >= 30.  
-weight is in units kg.  
-height is in units cm.
+#### 28.   
 ```sql
 select
 	patient_id,
@@ -473,3 +469,8 @@ select
       end as isObese
 from patients;
 ```
+### 2. Show patient_id, weight, height, isObese from the patients table.  
+Display isObese as a boolean 0 or 1.  
+Obese is defined as weight(kg)/(height(m)2) >= 30.  
+weight is in units kg.  
+height is in units cm.
