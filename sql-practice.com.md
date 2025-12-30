@@ -436,6 +436,26 @@ from patients;
 ```
 #### 29. Display every patient that has at least one admission and show their most recent admission along with the patient and doctor's full name.
 ```sql
+with ranked_admissions as (
+  select
+    ad.patient_id,
+    ad.admission_date,
+  concat(d.first_name, ' ', d.last_name) as doctor_name,
+  row_number() over (
+    partition by ad.patient_id
+    order by ad.admission_date desc
+  ) as rn
+  from admissions as ad
+  join doctors d on ad.attending_doctor_id = d.doctor_id
+)
+
+select
+  concat(p.first_name, ' ', p.last_name) as patient_name,
+  ra.admission_date,
+  ra.doctor_name
+from patients as p
+join ranked_admissions as ra on p.patient_id = ra.patient_id
+where ra.rn=1;
 ```
 ## Section-3: HARD
 #### 1. Show patient_id, first_name, last_name, and attending doctor's specialty.  
