@@ -418,19 +418,7 @@ from patients
 group by weight_group
 order by weight_group desc;
 ```
-#### 28.   
-```sql
-select
-	patient_id,
-    weight,
-    height,
-    case
-    	when (weight / power(height / 100.00, 2)) >= 30 then 1
-        else 0
-      end as isObese
-from patients;
-```
-#### 29. Display every patient that has at least one admission and show their most recent admission along with the patient and doctor's full name.
+#### 28. Display every patient that has at least one admission and show their most recent admission along with the patient and doctor's full name.
 ```sql
 with ranked_admissions as (
   select
@@ -474,3 +462,14 @@ Display isObese as a boolean 0 or 1.
 Obese is defined as weight(kg)/(height(m)2) >= 30.  
 weight is in units kg.  
 height is in units cm.
+```sql
+select
+	patient_id,
+    weight,
+    height,
+    case
+    	when (weight / power(height / 100.00, 2)) >= 30 then 1
+        else 0
+      end as isObese
+from patients;
+```
