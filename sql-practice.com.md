@@ -430,7 +430,7 @@ where ra.rn=1;
 #### 27. 
 
 ## Section-3: HARD
-### Show all of the patients grouped into weight groups.  
+### 1. Show all of the patients grouped into weight groups.  
 Show the total amount of patients in each weight group.  
 Order the list by the weight group decending.  
   
@@ -444,10 +444,11 @@ from patients
 group by weight_group
 order by weight_group desc;
 ```
-#### 1. Show patient_id, first_name, last_name, and attending doctor's specialty.  
-Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'  
-  
-Check patients, admissions, and doctors tables for required information.
+### 2. Show patient_id, weight, height, isObese from the patients table.  
+Display isObese as a boolean 0 or 1.  
+Obese is defined as weight(kg)/(height(m)2) >= 30.  
+weight is in units kg.  
+height is in units cm.
 ```sql
 select
 	patient_id,
@@ -459,11 +460,10 @@ select
       end as isObese
 from patients;
 ```
-### 2. Show patient_id, weight, height, isObese from the patients table.  
-Display isObese as a boolean 0 or 1.  
-Obese is defined as weight(kg)/(height(m)2) >= 30.  
-weight is in units kg.  
-height is in units cm.
+#### 3. Show patient_id, first_name, last_name, and attending doctor's specialty.  
+Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'  
+  
+Check patients, admissions, and doctors tables for required information.
 ```sql
 select
 	patient_id,
