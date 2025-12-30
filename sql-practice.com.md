@@ -427,7 +427,6 @@ from patients as p
 join ranked_admissions as ra on p.patient_id = ra.patient_id
 where ra.rn=1;
 ```
-#### 27. 
 
 ## Section-3: HARD
 ### 1. Show all of the patients grouped into weight groups.  
