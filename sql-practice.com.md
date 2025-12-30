@@ -483,4 +483,17 @@ from patients as p
 join doctorDetails as dd on p.patient_id = dd.patient_id
 where dd.diagnosis = 'Epilepsy' and dd.first_name = 'Lisa';
 ```
-
+#### 4. All patients who have gone through admissions, can see their medical documents on our site. Those patients are given a temporary password after their first admission. Show the patient_id and temp_password.  
+  
+The password must be the following, in order:  
+1. patient_id  
+2. the numerical length of patient's last_name  
+3. year of patient's birth_date
+```sql
+select
+  p.patient_id,
+  concat(p.patient_id, length(p.last_name), year(p.birth_date)) as temp_password
+from patients as p
+  join admissions as ad on p.patient_id = ad.patient_id
+group by p.patient_id;
+```
