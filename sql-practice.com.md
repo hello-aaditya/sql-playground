@@ -460,9 +460,27 @@ select
 from patients;
 ```
 #### 3. Show patient_id, first_name, last_name, and attending doctor's specialty.  
-Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'  
-  
+Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first name is 'Lisa'    
 Check patients, admissions, and doctors tables for required information.
 ```sql
+with doctorDetails as (
+  select
+    ad.patient_id,
+    ad.attending_doctor_id,
+    ad.diagnosis,
+    d.first_name,
+    d.specialty
+  from admissions as ad
+  join doctors as d on ad.attending_doctor_id = d.doctor_id
+)
 
+select
+  p.patient_id,
+  p.first_name as patient_first_name,
+  p.last_name as patient_last_name,
+  dd.specialty
+from patients as p
+join doctorDetails as dd on p.patient_id = dd.patient_id
+where dd.diagnosis = 'Epilepsy' and dd.first_name = 'Lisa';
 ```
+
