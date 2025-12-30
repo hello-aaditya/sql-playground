@@ -464,13 +464,5 @@ Show only the patients who has a diagnosis as 'Epilepsy' and the doctor's first 
   
 Check patients, admissions, and doctors tables for required information.
 ```sql
-select
-	patient_id,
-    weight,
-    height,
-    case
-    	when (weight / power(height / 100.00, 2)) >= 30 then 1
-        else 0
-      end as isObese
-from patients;
+
 ```
