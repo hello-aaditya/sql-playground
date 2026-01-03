@@ -66,3 +66,17 @@ LEFT JOIN
     EmployeeUNI as eu
 on e.id = eu.id;
 ```
+### 7.
+**Link:** [1068. Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/)
+```SQL
+SELECT
+    p.product_name,
+    s.year,
+    s.price
+FROM
+    Sales as s
+JOIN
+    Product as p
+ON
+    s.product_id = p.product_id;
+```
