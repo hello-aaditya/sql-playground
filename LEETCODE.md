@@ -33,4 +33,14 @@ WHERE
     OR population >= 25000000;
 ```
 ### 4.
-**Link:** 
+**Link:** [1148. Article Views I](https://leetcode.com/problems/article-views-i/)
+```SQL
+SELECT
+    DISTINCT author_id AS id
+FROM
+    Views
+WHERE
+    author_id = viewer_id
+ORDER BY
+    author_id;
+```
