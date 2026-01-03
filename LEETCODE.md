@@ -80,3 +80,28 @@ JOIN
 ON
     s.product_id = p.product_id;
 ```
+### 8.
+**Link:** [1581. Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/)
+```SQL
+WITH visitDetails AS (
+    SELECT
+        v.visit_id,
+        v.customer_id,
+        t.transaction_id
+    FROM
+        Visits as v
+    LEFT JOIN
+        Transactions as t
+    ON v.visit_id = t.visit_id
+)
+
+SELECT
+    customer_id,
+    COUNT(customer_id) as count_no_trans 
+FROM
+    visitDetails as v
+WHERE
+    transaction_id IS NULL
+GROUP BY
+    customer_id;
+```
