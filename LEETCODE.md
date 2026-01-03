@@ -44,3 +44,7 @@ WHERE
 ORDER BY
     author_id;
 ```
+### 5.
+**Link:** [1683. Invalid Tweets](https://leetcode.com/problems/invalid-tweets/)
+```sql
+```
