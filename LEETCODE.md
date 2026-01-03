@@ -54,3 +54,15 @@ FROM
 WHERE
     LENGTH(content) > 15;
 ```
+### 6.
+**Link:** [1378. Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/)
+```SQL
+SELECT
+    eu.unique_id,
+    e.name
+FROM
+    Employees as e
+LEFT JOIN
+    EmployeeUNI as eu
+on e.id = eu.id;
+```
