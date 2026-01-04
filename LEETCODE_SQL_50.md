@@ -105,3 +105,24 @@ WHERE
 GROUP BY
     customer_id;
 ```
+### 9.
+**Link:** [197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)
+```sql
+WITH temp_compare AS (
+    SELECT
+        w1.id,
+        w1.temperature AS today_temp,
+        w2.temperature AS yesterday_temp
+    FROM
+        Weather AS w1
+    JOIN Weather AS w2
+    ON w1.recordDate = DATE_ADD(w2.recordDate, INTERVAL 1 DAY)
+)
+
+SELECT
+    id
+FROM
+    temp_compare
+WHERE
+    today_temp > yesterday_temp;
+```
