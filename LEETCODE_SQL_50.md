@@ -11,7 +11,7 @@
 | 7   | [1068. Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/)                                                             | [Solution](#7)  |             | EASY         |
 | 8   | [1581. Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | [Solution](#8)  |             | EASY         |
 | 9   | [197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)                                                                          | [Solution](#9)  | `SELF JOIN` | INTERMEDIATE |
-| 10  |                                                                                                                                                       | [Solution](#10) |             |              |
+| 10  | [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/)                                       | [Solution](#10) |             | INTERMEDIATE |
 
 ### 1.
 **Link:**  [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
@@ -141,4 +141,30 @@ WHERE
     today_temp > yesterday_temp;
 ```
 ### 10.
-**Link:** 
+**Link:** [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/)
+```sql
+WITH startAndEnd AS(
+    SELECT
+        s.machine_id as machine_id,
+        s.timestamp as start_time,
+        e.timestamp as end_time
+    FROM Activity AS s
+    JOIN Activity AS e
+    ON
+        s.machine_id = e.machine_id
+    AND
+        s.process_id = e.process_id
+    AND
+        s.activity_type = 'start'
+    AND
+        e.activity_type = 'end'
+)
+
+SELECT
+    machine_id,
+    ROUND(AVG(end_time - start_time), 3) AS processing_time
+FROM
+    startAndEnd
+GROUP BY
+    machine_id;
+```
