@@ -1,17 +1,17 @@
 # [SQL 50](https://leetcode.com/studyplan/top-sql-50/)
 
-| #   | QUESTION                                                                                                | SOLUTION        | LEVEL |
-| --- | ------------------------------------------------------------------------------------------------------- | --------------- | ----- |
-| 1   | [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | [Solution](#1)  | EASY  |
-| 2   | [584. Find Customer Referee](https://leetcode.com/problems/find-customer-referee/)                      | [Solution](#2)  |       |
-| 3   | [584. Find Customer Referee](https://leetcode.com/problems/find-customer-referee/)                      | [Solution](#3)  |       |
-| 4   |                                                                                                         | [Solution](#4)  |       |
-| 5   |                                                                                                         | [Solution](#5)  |       |
-| 6   |                                                                                                         | [Solution](#6)  |       |
-| 7   |                                                                                                         | [Solution](#7)  |       |
-| 8   |                                                                                                         | [Solution](#8)  |       |
-| 9   |                                                                                                         | [Solution](#9)  |       |
-| 10  |                                                                                                         | [Solution](#10) |       |
+| #   | QUESTION                                                                                                                              | SOLUTION        | LEVEL |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ----- |
+| 1   | [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)                               | [Solution](#1)  | EASY  |
+| 2   | [584. Find Customer Referee](https://leetcode.com/problems/find-customer-referee/)                                                    | [Solution](#2)  |       |
+| 3   | [595. Big Countries](https://leetcode.com/problems/big-countries/)                                                                    | [Solution](#3)  |       |
+| 4   | [1148. Article Views I](https://leetcode.com/problems/article-views-i/)                                                               | [Solution](#4)  |       |
+| 5   | [1683. Invalid Tweets](https://leetcode.com/problems/invalid-tweets/)                                                                 | [Solution](#5)  |       |
+| 6   | [1378. Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/) | [Solution](#6)  |       |
+| 7   |                                                                                                                                       | [Solution](#7)  |       |
+| 8   |                                                                                                                                       | [Solution](#8)  |       |
+| 9   |                                                                                                                                       | [Solution](#9)  |       |
+| 10  |                                                                                                                                       | [Solution](#10) |       |
 
 ### 1.
 **Link:**  [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
