@@ -1,4 +1,9 @@
 # [SQL 50](https://leetcode.com/studyplan/top-sql-50/)
+
+| #   | QUESTION                                                                                                | LEVEL |
+| --- | ------------------------------------------------------------------------------------------------------- | ----- |
+| 1   | [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) |       |
+
 ### 1.
 **Link:**  [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
 ```sql
@@ -126,3 +131,5 @@ FROM
 WHERE
     today_temp > yesterday_temp;
 ```
+### 10.
+**Link:** 
