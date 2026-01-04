@@ -1,8 +1,17 @@
 # [SQL 50](https://leetcode.com/studyplan/top-sql-50/)
 
-| #   | QUESTION                                                                                                | LEVEL |
-| --- | ------------------------------------------------------------------------------------------------------- | ----- |
-| 1   | [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) |       |
+| #   | QUESTION                                                                                                | SOLUTION       | LEVEL |
+| --- | ------------------------------------------------------------------------------------------------------- | -------------- | ----- |
+| 1   | [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | [Solution](#1) | EASY  |
+| 2   |                                                                                                         |                |       |
+| 3   |                                                                                                         |                |       |
+| 4   |                                                                                                         |                |       |
+| 5   |                                                                                                         |                |       |
+| 6   |                                                                                                         |                |       |
+| 7   |                                                                                                         |                |       |
+| 8   |                                                                                                         |                |       |
+| 9   |                                                                                                         |                |       |
+| 10  |                                                                                                         |                |       |
 
 ### 1.
 **Link:**  [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
