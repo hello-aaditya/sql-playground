@@ -1,22 +1,22 @@
 # [SQL 50](https://leetcode.com/studyplan/top-sql-50/)
 
-| #   | QUESTION                                                                                                                                              | SOLUTION        | TAG         | LEVEL        |
-| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ----------- | ------------ |
-| 1   | [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)                                               | [Solution](#1)  |             | EASY         |
-| 2   | [584. Find Customer Referee](https://leetcode.com/problems/find-customer-referee/)                                                                    | [Solution](#2)  |             | EASY         |
-| 3   | [595. Big Countries](https://leetcode.com/problems/big-countries/)                                                                                    | [Solution](#3)  |             | EASY         |
-| 4   | [1148. Article Views I](https://leetcode.com/problems/article-views-i/)                                                                               | [Solution](#4)  |             | EASY         |
-| 5   | [1683. Invalid Tweets](https://leetcode.com/problems/invalid-tweets/)                                                                                 | [Solution](#5)  |             | EASY         |
-| 6   | [1378. Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/)                 | [Solution](#6)  |             | EASY         |
-| 7   | [1068. Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/)                                                             | [Solution](#7)  |             | EASY         |
-| 8   | [1581. Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | [Solution](#8)  |             | EASY         |
-| 9   | [197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)                                                                          | [Solution](#9)  | `SELF JOIN` | INTERMEDIATE |
-| 10  | [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/)                                       | [Solution](#10) |             | INTERMEDIATE |
-| 11  | [577. Employee Bonus](https://leetcode.com/problems/employee-bonus/)                                                                                  | [Solution](#11) |             | EASY         |
-| 12  |                                                                                                                                                       | [Solution](#10) |             |              |
-| 13  |                                                                                                                                                       | [Solution](#10) |             |              |
-| 14  |                                                                                                                                                       | [Solution](#10) |             |              |
-| 15  |                                                                                                                                                       | [Solution](#10) |             |              |
+| #   | QUESTION                                                                                                                                              | SOLUTION        | TAG          | LEVEL        |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ------------ | ------------ |
+| 1   | [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)                                               | [Solution](#1)  |              | EASY         |
+| 2   | [584. Find Customer Referee](https://leetcode.com/problems/find-customer-referee/)                                                                    | [Solution](#2)  |              | EASY         |
+| 3   | [595. Big Countries](https://leetcode.com/problems/big-countries/)                                                                                    | [Solution](#3)  |              | EASY         |
+| 4   | [1148. Article Views I](https://leetcode.com/problems/article-views-i/)                                                                               | [Solution](#4)  |              | EASY         |
+| 5   | [1683. Invalid Tweets](https://leetcode.com/problems/invalid-tweets/)                                                                                 | [Solution](#5)  |              | EASY         |
+| 6   | [1378. Replace Employee ID With The Unique Identifier](https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/)                 | [Solution](#6)  |              | EASY         |
+| 7   | [1068. Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/)                                                             | [Solution](#7)  |              | EASY         |
+| 8   | [1581. Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | [Solution](#8)  |              | EASY         |
+| 9   | [197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)                                                                          | [Solution](#9)  | `SELF JOIN`  | INTERMEDIATE |
+| 10  | [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/)                                       | [Solution](#10) |              | INTERMEDIATE |
+| 11  | [577. Employee Bonus](https://leetcode.com/problems/employee-bonus/)                                                                                  | [Solution](#11) |              | EASY         |
+| 12  | [1280. Students and Examinations](https://leetcode.com/problems/students-and-examinations/)                                                           | [Solution](#10) | `CROSS JOIN` |              |
+| 13  |                                                                                                                                                       | [Solution](#10) |              |              |
+| 14  |                                                                                                                                                       | [Solution](#10) |              |              |
+| 15  |                                                                                                                                                       | [Solution](#10) |              |              |
 
 ### 1.
 **Link:**  [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
@@ -196,4 +196,37 @@ FROM
 WHERE
     bonus < 1000
 OR bonus IS NULL;
+```
+### 12.
+**Link:** [1280. Students and Examinations](https://leetcode.com/problems/students-and-examinations/)
+```sql
+WITH studDetailsWithExam AS (
+    SELECT
+        s.student_id,
+        s.student_name,
+        sub.subject_name
+    FROM
+        Students AS s
+    CROSS JOIN
+        Subjects AS sub
+)
+
+SELECT
+    studD.student_id,
+    studD.student_name,
+    studD.subject_name,
+    count(ex.subject_name) AS attended_exams
+FROM
+    studDetailsWithExam AS studD
+LEFT JOIN
+    Examinations AS ex
+ON studD.student_id = ex.student_id
+AND 
+	studD.subject_name = ex.subject_name
+GROUP BY
+    student_id,
+    subject_name
+ORDER BY
+    student_id,
+    subject_name;
 ```
