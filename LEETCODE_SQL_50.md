@@ -15,7 +15,7 @@
 | 11  | [577. Employee Bonus](https://leetcode.com/problems/employee-bonus/)                                                                                  | [Solution](#11) |              | EASY         |
 | 12  | [1280. Students and Examinations](https://leetcode.com/problems/students-and-examinations/)                                                           | [Solution](#12) | `CROSS JOIN` | INTERMEDIATE |
 | 13  | [570. Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/)                                | [Solution](#13) |              | INTERMEDIATE |
-| 14  |                                                                                                                                                       | [Solution](#14) |              |              |
+| 14  | [620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies/)                                                                            | [Solution](#14) |              | EASY         |
 | 15  |                                                                                                                                                       | [Solution](#15) |              |              |
 
 ### 1.
@@ -246,4 +246,16 @@ HAVING
     COUNT(employee.id) >= 5;
 ```
 ### 14.
-**Link:**
+**Link:** [620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies/)
+```sql
+SELECT
+    *
+FROM
+    Cinema
+WHERE
+    MOD(id, 2) != 0
+AND
+    description NOT LIKE 'boring'
+ORDER BY
+    rating DESC;    
+```
