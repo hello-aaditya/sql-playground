@@ -12,7 +12,11 @@
 | 8   | [1581. Customer Who Visited but Did Not Make Any Transactions](https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/) | [Solution](#8)  |             | EASY         |
 | 9   | [197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)                                                                          | [Solution](#9)  | `SELF JOIN` | INTERMEDIATE |
 | 10  | [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/)                                       | [Solution](#10) |             | INTERMEDIATE |
-| 11  |                                                                                                                                                       |                 |             |              |
+| 11  | [577. Employee Bonus](https://leetcode.com/problems/employee-bonus/)                                                                                  | [Solution](#11) |             | EASY         |
+| 12  |                                                                                                                                                       | [Solution](#10) |             |              |
+| 13  |                                                                                                                                                       | [Solution](#10) |             |              |
+| 14  |                                                                                                                                                       | [Solution](#10) |             |              |
+| 15  |                                                                                                                                                       | [Solution](#10) |             |              |
 
 ### 1.
 **Link:**  [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
