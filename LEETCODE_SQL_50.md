@@ -13,7 +13,7 @@
 | 9   | [197. Rising Temperature](https://leetcode.com/problems/rising-temperature/)                                                                          | [Solution](#9)  | `SELF JOIN`  | INTERMEDIATE |
 | 10  | [1661. Average Time of Process per Machine](https://leetcode.com/problems/average-time-of-process-per-machine/)                                       | [Solution](#10) |              | INTERMEDIATE |
 | 11  | [577. Employee Bonus](https://leetcode.com/problems/employee-bonus/)                                                                                  | [Solution](#11) |              | EASY         |
-| 12  | [1280. Students and Examinations](https://leetcode.com/problems/students-and-examinations/)                                                           | [Solution](#10) | `CROSS JOIN` |              |
+| 12  | [1280. Students and Examinations](https://leetcode.com/problems/students-and-examinations/)                                                           | [Solution](#12) | `CROSS JOIN` | INTERMEDIATE |
 | 13  |                                                                                                                                                       | [Solution](#10) |              |              |
 | 14  |                                                                                                                                                       | [Solution](#10) |              |              |
 | 15  |                                                                                                                                                       | [Solution](#10) |              |              |
