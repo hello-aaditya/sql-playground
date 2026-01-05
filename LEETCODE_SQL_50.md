@@ -230,3 +230,18 @@ ORDER BY
     student_id,
     subject_name;
 ```
+### 13.
+**Link:** [570. Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/)
+```sql
+SELECT
+    manager.name
+FROM
+    Employee AS employee
+JOIN
+    Employee AS manager
+ON employee.managerId = manager.id
+GROUP BY
+    manager.id
+HAVING 
+    COUNT(employee.id) >= 5;
+```
