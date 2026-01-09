@@ -15,8 +15,8 @@
 | 11  | [577. Employee Bonus](https://leetcode.com/problems/employee-bonus/)                                                                                  | [Solution](#11) |              | EASY         |
 | 12  | [1280. Students and Examinations](https://leetcode.com/problems/students-and-examinations/)                                                           | [Solution](#12) | `CROSS JOIN` | INTERMEDIATE |
 | 13  | [570. Managers with at Least 5 Direct Reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/)                                | [Solution](#13) |              | INTERMEDIATE |
-| 14  | [620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies/)                                                                            | [Solution](#14) |              | EASY         |
-| 15  |                                                                                                                                                       | [Solution](#15) |              |              |
+| 14  | [1934. Confirmation Rate](https://leetcode.com/problems/confirmation-rate/)                                                                           | [Solution](#14) |              | EASY         |
+| 15  | <br>[620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies/)                                                                        | [Solution](#15) |              |              |
 
 ### 1.
 **Link:**  [1757. Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/)
