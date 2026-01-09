@@ -287,7 +287,10 @@ FROM
 LEFT JOIN
     confirmedUser AS c
 ON
-    u.user_id = c.user_id;```
+    u.user_id = c.user_id;
+```
+```sql
+```
 ### 15.
 **Link:** [620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies/)
 ```sql
