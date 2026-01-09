@@ -246,6 +246,48 @@ HAVING
     COUNT(employee.id) >= 5;
 ```
 ### 14.
+**Link:** [1934. Confirmation Rate](https://leetcode.com/problems/confirmation-rate/)
+```sql
+-- ALL USER-ID AND COUNT OF THIER ACTIONS (EITHER 'timeout or 'confirmed')
+WITH userActions AS (
+    SELECT
+        s.user_id,
+        COUNT(c.action) AS countAction
+    FROM
+        Signups AS s
+    LEFT JOIN
+        Confirmations AS c
+    ON s.user_id = c.user_id
+    GROUP BY
+        s.user_id
+),
+-- USER-ID HAVING 'confirmed'
+confirmedUser AS (
+    SELECT
+        c.user_id,
+        count(c.action) AS confirmedAction
+    FROM
+        Confirmations AS c
+    WHERE
+        action = 'confirmed'
+    GROUP BY
+        c.user_id
+)
+
+
+SELECT
+    u.user_id,
+    COALESCE (
+        ROUND (c.confirmedAction * 1.0 / NULLIF(u.countAction, 0), 2), 
+        0
+    ) AS confirmation_rate
+FROM
+    userActions AS u
+LEFT JOIN
+    confirmedUser AS c
+ON
+    u.user_id = c.user_id;```
+### 15.
 **Link:** [620. Not Boring Movies](https://leetcode.com/problems/not-boring-movies/)
 ```sql
 SELECT
