@@ -1,64 +1,46 @@
-# 10 Easy SQL Practice Questions
+## Easy Level Questions
 
-### 1) Show all customers from **Delhi**
+#### Question-1
 
-_(customers table)_
-### 2) Display all products with **price greater than 1000**
+##### Show all customers from Delhi (customers table)
 
-_(products table)_
+#### Question-2
 
----
+##### Display all products with price greater than 1000 (products table)
 
-### 3) Show all categories available in the database
+#### Question-3
 
-_(categories table)_
+##### Show all categories available in the database (categories table)
 
----
+#### Question-4
 
-### 4) List all orders with status = **'Pending'**
+##### List all orders with status = 'Pending' (orders table)
 
- _(orders table)_
+#### Question-5
 
----
+##### Show the names and emails of all customers who joined after 2024-04-01 (customers table)
 
-### 5) Show the **names and emails** of all customers who joined **after 2024-04-01**
+#### Question-6
 
-_(customers table)_
+##### Display all products sorted by price (highest to lowest) (products table)
 
----
+#### Question-7
 
-### 6) Display all products sorted by **price (highest to lowest)**
+##### Find total number of customers in the database (customers table)
 
-_(products table — ORDER BY)_
+#### Question-8
 
----
+##### Show each order with its customer name (JOIN orders + customers)
 
-### 7) Find total number of customers in the database
+#### Question-9
 
-_(COUNT)_
+##### Show order items with product name and quantity (JOIN order_items + products)
 
----
+#### Question-10
 
-### 8) Show each order with its customer name
-
-(Join `orders` + `customers`)  
-_(basic JOIN)_
+##### Show full order details: order_id, customer_name, product_name, quantity, order_date, status (JOIN multiple tables)
 
 ---
-
-### 9) Show order items with product name and quantity
-
-(Join `order_items` + `products`)  
-_(basic JOIN)_
-
----
-
-### 10) Show full order details:
-
-**order_id, customer_name, product_name, quantity, order_date, status**  
-(Join all needed tables)  
-_(multi-table JOIN)_
-
 # Solution
 ```sql
 -- ######## QUESTIONS ########
