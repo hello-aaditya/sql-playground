@@ -1,3 +1,66 @@
+# 10 Easy SQL Practice Questions
+
+### 1) Show all customers from **Delhi**
+
+_(customers table)_
+
+---
+
+### 2) Display all products with **price greater than 1000**
+
+_(products table)_
+
+---
+
+### 3) Show all categories available in the database
+
+_(categories table)_
+
+---
+
+### 4) List all orders with status = **'Pending'**
+
+ _(orders table)_
+
+---
+
+### 5) Show the **names and emails** of all customers who joined **after 2024-04-01**
+
+✅ _(customers table)_
+
+---
+
+### 6) Display all products sorted by **price (highest to lowest)**
+
+✅ _(products table — ORDER BY)_
+
+---
+
+### 7) Find total number of customers in the database
+
+✅ _(COUNT)_
+
+---
+
+### 8) Show each order with its customer name
+
+(Join `orders` + `customers`)  
+✅ _(basic JOIN)_
+
+---
+
+### 9) Show order items with product name and quantity
+
+(Join `order_items` + `products`)  
+✅ _(basic JOIN)_
+
+---
+
+### 10) Show full order details:
+
+**order_id, customer_name, product_name, quantity, order_date, status**  
+(Join all needed tables)  
+✅ _(multi-table JOIN)_
 ```sql
 -- ######## QUESTIONS ########
 /* 
