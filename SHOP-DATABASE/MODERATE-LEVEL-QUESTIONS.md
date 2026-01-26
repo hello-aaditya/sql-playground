@@ -39,3 +39,4 @@
 #### Question-10
 
 ##### Show month-wise number of orders (month, total_orders) using order_date grouping
+SQL
