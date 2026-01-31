@@ -39,3 +39,4 @@
 #### Question-30
 
 ##### For each city, show the **total revenue generated** (city, total_revenue)
+
