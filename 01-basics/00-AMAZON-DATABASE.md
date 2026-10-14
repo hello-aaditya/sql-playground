@@ -10,16 +10,16 @@ Create a MySQL database named `amazon` and define a `PRODUCT` table to store pro
 ### 2. Table Creation
 Create a table named `PRODUCT` with the following attributes and constraints:
 
-|Attribute|Data Type|Constraints / Requirements|
-|---|---|---|
-|`product_id`|INT|Primary Key|
-|`product_name`|VARCHAR(255)|NOT NULL|
-|`description`|TEXT|Optional|
-|`brand`|VARCHAR(100)|Optional|
-|`price`|DECIMAL(10,2)|NOT NULL|
-|`product_status`|ENUM|Allowed values: `ACTIVE`, `INACTIVE`, `DISCONTINUED`|
-|`created_at`|TIMESTAMP|Record creation timestamp|
-|`updated_at`|TIMESTAMP|Timestamp of the last record update|
+| Attribute        | Data Type     | Constraints / Requirements                           |
+| ---------------- | ------------- | ---------------------------------------------------- |
+| `product_id`     | INT           | Primary Key                                          |
+| `product_name`   | VARCHAR(255)  | NOT NULL                                             |
+| `description`    | TEXT          | Optional                                             |
+| `brand`          | VARCHAR(100)  | Optional                                             |
+| `price`          | DECIMAL(10,2) | NOT NULL                                             |
+| `product_status` | ENUM          | Allowed values: `ACTIVE`, `INACTIVE`, `DISCONTINUED` |
+| `created_at`     | TIMESTAMP     | Record creation timestamp                            |
+| `updated_at`     | TIMESTAMP     | Timestamp of the last record update                  |
 
 ### 3. Implementation Requirements
 - Use appropriate MySQL data types for all attributes.
@@ -33,3 +33,32 @@ Create a table named `PRODUCT` with the following attributes and constraints:
 - A database named `amazon`.
 - A `PRODUCT` table created with the specified attributes and constraints.
 - Verification of the table structure using the `DESC` command.
+
+## Solution
+```sql
+-- 1. Create the database
+CREATE DATABASE amazon;
+
+-- 2. Select the database
+USE amazon;
+
+-- 3. Create the PRODUCT table
+CREATE TABLE product (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    description TEXT,
+    brand VARCHAR(100),
+    price DECIMAL(10, 2) NOT NULL,
+    product_status ENUM (
+        'ACTIVE',
+        'INACTIVE',
+        'DISCONTINUED'
+    ),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- 4. Verify the table structure
+DESC product;
+```
