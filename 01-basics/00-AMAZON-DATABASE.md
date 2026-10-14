@@ -21,19 +21,36 @@ Create a table named `PRODUCT` with the following attributes and constraints:
 | `created_at`     | TIMESTAMP     | Record creation timestamp                            |
 | `updated_at`     | TIMESTAMP     | Timestamp of the last record update                  |
 
-### 3. Implementation Requirements
-- Use appropriate MySQL data types for all attributes.
-- Ensure `product_id` uniquely identifies each product.
-- Prevent the insertion of records without a product name or price.
-- Restrict `product_status` to the specified values.
-- Configure `created_at` to capture the record creation time automatically.
-- Configure `updated_at` to update automatically whenever the record is modified.
+### 3. Initial Data Insertion
+Insert product records into the `PRODUCT` table.
 
-### 4. Deliverables
-- A database named `amazon`.
-- A `PRODUCT` table created with the specified attributes and constraints.
-- Verification of the table structure using the `DESC` command.
-
+Requirements:
+- Include products from multiple brands.
+- Include products with different prices.
+- Include records with different statuses: `ACTIVE`, `INACTIVE`, and `DISCONTINUED`.
+- Ensure each `product_id` is unique.
+- Verify that the timestamps are populated automatically.
+### 4. Data Retrieval and Filtering
+Implement and execute the following SQL queries:
+1. Retrieve all columns and records from `PRODUCT`.
+2. Retrieve only `product_name` and `price` for all products.
+3. Retrieve products whose price is greater than ₹10,000.
+4. Retrieve products with `product_status = 'ACTIVE'`.
+5. Retrieve products belonging to the `Logitech` brand.
+6. Display all products sorted by price in descending order.
+### 5. Verification Requirements
+- Verify database selection using `SELECT DATABASE();`.
+- Verify table creation using `SHOW TABLES;`.
+- Verify the table structure using `DESC PRODUCT;`.
+- Verify inserted records using `SELECT * FROM PRODUCT;`.
+- Confirm that the ENUM column accepts only the specified status values under strict SQL mode.
+- Confirm that `created_at` and `updated_at` behave as specified.
+### 6. Deliverables
+- A MySQL database named `amazon`.
+- A `PRODUCT` table satisfying the specified schema.
+- At least five inserted product records.
+- Successfully executed SQL queries for all six retrieval requirements.
+- Verified table structure and timestamp behavior.
 ## Solution
 ```sql
 -- 1. Create the database
